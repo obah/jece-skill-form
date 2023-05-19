@@ -1,0 +1,39 @@
+.form-part {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field-text {
+  border-bottom: 1px solid #4b5b88;
+}
+
+.sub-text {
+  font-size: small;
+  font-weight: 100;
+}
+
+.input-field,
+.input-field-2,
+.form-select {
+  width: 96%;
+  height: 3em;
+  border: 2px solid #2cb1c3;
+  border-radius: 0.85em;
+  background: transparent;
+  color: #fff;
+  font-size: medium;
+  padding-left: 1em;
+}
+
+.selector option {
+  background-color: #010449;
+  color: #fff;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .input-field,
+  .input-field-2,
+  .form-select {
+    width: 89%;
+  }
+}
