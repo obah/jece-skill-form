@@ -22,4 +22,4 @@ Screenshots of various pages are availble in:
 
 ### './jece-skill-form/screenshots'
 
-`A dark and light theme were presented in the material but the sample project had no theme switch toggle, hence I used CSS media to determine if the visitor's system setting is set to either light or dark mode to determin which version it would show.`
+`A dark and light theme were presented in the material but the sample project had no theme switch toggle, hence I used CSS media query to determine if the visitor's system setting is set to either light or dark mode to determine which version it would show.`
