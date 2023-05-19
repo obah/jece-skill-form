@@ -4,6 +4,9 @@ import Country from "./formDetails/country";
 import HouseAddress from "./formDetails/houseAddress";
 import Name from "./formDetails/name";
 import Telephone from "./formDetails/telephone";
+import "../styles/form.css";
+
+//! this form componenet has more functionality than the other one as it allows the user to easily switch between the sections either through the next button or through options on the side. Works well but the state manangement causes the button switching or form validation to break in some certain scenarios
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -168,17 +171,33 @@ export default function Form() {
           Answer the following questions to begin your plan
         </p>
       </div>
-      <div className="top-divider"></div>
       <div className="form-body">
         <div className="form-section">
           {formSectionOptions.map((options) => (
-            <button onClick={() => setSection(`${options.page}`)}>
-              <p>{options.title}</p>
-              <p>{options.description}</p>
-              <p>{options.icon}</p>{" "}
-              {/** turn this tag to img when you get icons  */}
-            </button>
+            <div
+              className="sidebar-option"
+              key={options.title}
+              onClick={() => setSection(`${options.page}`)}
+            >
+              <div className="section-text">
+                <p>{options.title}</p>
+                <p>{options.description}</p>
+              </div>
+              <button
+                className={`icons ${
+                  section === options.page ? "selected-icon" : ""
+                }`}
+              >
+                {options.icon}
+              </button>
+              <div
+                className={`indicator ${
+                  section === options.page ? "selected-indicator" : ""
+                }`}
+              ></div>
+            </div>
           ))}
+          <div className="line"></div>
         </div>
         <div className="form-field">
           {switcher()}

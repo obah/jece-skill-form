@@ -22,7 +22,7 @@ export default function Form() {
   });
   const [section, setSection] = useState(0);
 
-  //to help with switching between sections, through the next button or section buttons by the side
+  //to help with switching between sections, through the next button
   const switcher = () => {
     switch (+section) {
       case 0:

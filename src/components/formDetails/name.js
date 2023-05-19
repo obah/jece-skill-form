@@ -9,8 +9,7 @@ export default function Name({ formData, setFormData }) {
         <p className="sub-text">Please fill in the details below</p>
       </div>
       <div className="form-field-input">
-        <p className="sub-text">Enter your name</p>{" "}
-        {/**might change this to placeholder/caption */}
+        <p className="sub-text">Enter your name</p>
         <input
           type="text"
           className="input-field"
